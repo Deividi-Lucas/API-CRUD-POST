@@ -24,6 +24,7 @@ namespace dotnet_api.src.Services
             var getpost = await _context.ToDo.FirstOrDefaultAsync(item => item.Id == id);
             if (getpost == null) return null;
 
+
             getpost.IsDelete = true;
 
             _context.ToDo.Update(getpost);
